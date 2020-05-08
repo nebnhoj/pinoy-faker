@@ -1,6 +1,6 @@
 {
   "name": "pinoy-faker",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "JavaScript Faker for Pinoy 😊",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,13 @@
   "keywords": [
     "node",
     "npm",
-    "pinoy-faker"
+    "pinoy-faker",
+    "sss",
+    "philhealth",
+    "philippines",
+    "pinoy",
+    "pinoy-js-developer",
+    "faker"
   ],
   "author": "John Ben Uera",
   "license": "MIT",
