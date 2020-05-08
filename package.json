@@ -1,0 +1,17 @@
+{
+  "name": "pinoy-faker",
+  "version": "1.0.0",
+  "description": "JavaScript Faker for Pinoy 😊",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "pinoy-faker"
+  ],
+  "author": "John Ben Uera",
+  "license": "MIT"
+}
