@@ -1,5 +1,8 @@
-const  {names} = require('./modules/names'); 
-const Faker = {
-    names:names
+
+ const Names = require('./modules/names')
+function Faker (opts) {
+    let self = this;
+    opts = opts || {};
+    self.names  = new Names() 
 }
-module.exports.Faker = Faker
+module.exports = new Faker()
