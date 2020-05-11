@@ -1,6 +1,6 @@
 {
   "name": "pinoy-faker",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "JavaScript Faker for Pinoy 😊",
   "main": "index.js",
   "scripts": {
