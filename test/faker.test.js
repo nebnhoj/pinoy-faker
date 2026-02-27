@@ -39,3 +39,14 @@ test('location generator returns complete lookup arrays and random values', () =
   assert.equal(typeof fullAddress.city, 'string');
   assert.equal(typeof fullAddress.barangay, 'string');
 });
+
+test('foods generator returns filipino food data', () => {
+  assert.ok(Faker.foods.dishes().includes('Adobo'));
+  assert.ok(Faker.foods.streetFoods().includes('Isaw'));
+  assert.ok(Faker.foods.desserts().includes('Halo-Halo'));
+
+  assert.equal(typeof Faker.foods.dish(), 'string');
+  assert.equal(typeof Faker.foods.streetFood(), 'string');
+  assert.equal(typeof Faker.foods.dessert(), 'string');
+  assert.equal(typeof Faker.foods.food(), 'string');
+});
