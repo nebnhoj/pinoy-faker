@@ -1,8 +1,13 @@
+const Names = require('./modules/names');
+const Contact = require('./modules/contact');
+const Government = require('./modules/government');
 
- const Names = require('./modules/names')
-function Faker (opts) {
-    let self = this;
-    opts = opts || {};
-    self.names  = new Names() 
+class Faker {
+  constructor() {
+    this.names = new Names();
+    this.contact = new Contact();
+    this.government = new Government();
+  }
 }
-module.exports = new Faker()
+
+module.exports = new Faker();
