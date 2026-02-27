@@ -19,6 +19,7 @@ console.log(faker.names.fullName());
 console.log(faker.contact.mobileNumber());
 console.log(faker.government.tin());
 console.log(faker.location.fullAddress());
+console.log(faker.foods.food());
 ```
 
 ## API
@@ -94,6 +95,29 @@ faker.location.province('Region III');
 faker.location.city('Cebu');
 faker.location.barangay('Quezon City');
 faker.location.fullAddress();
+```
+
+
+### `faker.foods`
+
+Generate common Filipino food names.
+
+- `dishes()` -> all supported ulam/main dishes
+- `streetFoods()` -> all supported Filipino street food items
+- `desserts()` -> all supported dessert/snack items
+- `dish()`
+- `streetFood()`
+- `dessert()`
+- `food()` -> random item from all food lists
+
+```js
+faker.foods.dishes();
+faker.foods.streetFoods();
+faker.foods.desserts();
+faker.foods.dish();
+faker.foods.streetFood();
+faker.foods.dessert();
+faker.foods.food();
 ```
 
 ## Notes
