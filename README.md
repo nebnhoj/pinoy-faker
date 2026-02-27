@@ -18,6 +18,7 @@ const faker = require('pinoy-faker');
 console.log(faker.names.fullName());
 console.log(faker.contact.mobileNumber());
 console.log(faker.government.tin());
+console.log(faker.location.fullAddress());
 ```
 
 ## API
@@ -67,6 +68,24 @@ faker.government.tin();
 faker.government.sss();
 faker.government.philHealth();
 faker.government.pagIbig();
+```
+
+### `faker.location`
+
+Generate Philippine location data.
+
+- `region()`
+- `province()`
+- `city()`
+- `barangay()`
+- `fullAddress()` → `{ region, province, city, barangay }`
+
+```js
+faker.location.region();
+faker.location.province();
+faker.location.city();
+faker.location.barangay();
+faker.location.fullAddress();
 ```
 
 ## Notes
