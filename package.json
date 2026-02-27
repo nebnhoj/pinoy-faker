@@ -1,10 +1,10 @@
 {
   "name": "pinoy-faker",
-  "version": "1.0.11",
-  "description": "JavaScript Faker for Pinoy 😊",
+  "version": "1.3.0",
+  "description": "JavaScript Faker for Philippines",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\"",
+    "test": "node --test",
     "start": "node index.js"
   },
   "keywords": [
@@ -15,11 +15,14 @@
     "philhealth",
     "philippines",
     "pinoy",
-    "pinoy-js-developer",
-    "faker"
+    "faker",
+    "tin",
+    "pag-ibig"
   ],
   "author": "John Ben Uera",
   "license": "MIT",
-  "homepage": "https://github.com/nebnhoj/pinoy-faker"
-
+  "homepage": "https://github.com/nebnhoj/pinoy-faker",
+  "engines": {
+    "node": ">=18"
+  }
 }
