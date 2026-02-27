@@ -74,17 +74,25 @@ faker.government.pagIbig();
 
 Generate Philippine location data.
 
+- `regions()` -> all supported regions
+- `provinces(region?)` -> all supported provinces (optionally filtered by region)
+- `cities(province?)` -> all supported cities (optionally filtered by province)
+- `barangays(city?)` -> all supported barangays (optionally filtered by city)
 - `region()`
-- `province()`
-- `city()`
-- `barangay()`
+- `province(region?)`
+- `city(province?)`
+- `barangay(city?)`
 - `fullAddress()` → `{ region, province, city, barangay }`
 
 ```js
+faker.location.regions();
+faker.location.provinces('Region IV-A');
+faker.location.cities('Laguna');
+faker.location.barangays('Calamba');
 faker.location.region();
-faker.location.province();
-faker.location.city();
-faker.location.barangay();
+faker.location.province('Region III');
+faker.location.city('Cebu');
+faker.location.barangay('Quezon City');
 faker.location.fullAddress();
 ```
 

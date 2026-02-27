@@ -22,7 +22,12 @@ test('government ids return expected format', () => {
   assert.match(Faker.government.pagIbig(), /^\d{4}-\d{4}-\d{4}$/);
 });
 
-test('location generator returns region, province, city and barangay', () => {
+test('location generator returns complete lookup arrays and random values', () => {
+  assert.ok(Faker.location.regions().includes('NCR'));
+  assert.ok(Faker.location.provinces('Region IV-A').includes('Laguna'));
+  assert.ok(Faker.location.cities('Laguna').includes('Calamba'));
+  assert.ok(Faker.location.barangays('Quezon City').includes('Commonwealth'));
+
   assert.equal(typeof Faker.location.region(), 'string');
   assert.equal(typeof Faker.location.province(), 'string');
   assert.equal(typeof Faker.location.city(), 'string');
