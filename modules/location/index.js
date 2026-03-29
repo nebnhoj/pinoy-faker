@@ -139,16 +139,12 @@ class Location {
   }
 
   fullAddress() {
-    const province = this.province();
+    const region = this.region();
+    const province = this.province(region);
     const city = cityByProvince[province] ? this.city(province) : this.city();
     const barangay = barangaysByCity[city] ? this.barangay(city) : this.barangay();
 
-    return {
-      region: this.region(),
-      province,
-      city,
-      barangay
-    };
+    return { region, province, city, barangay };
   }
 }
 

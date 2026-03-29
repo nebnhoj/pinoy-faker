@@ -28,6 +28,7 @@ class Contact {
   }
 
   landlineNumber(areaCode = '02') {
+    // Use string area codes to preserve leading zeros (e.g. '032', not 32)
     const normalizedAreaCode = String(areaCode).replace(/[^\d]/g, '') || '02';
     return `${normalizedAreaCode}-${randomDigits(7)}`;
   }

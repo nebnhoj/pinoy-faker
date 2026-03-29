@@ -51,6 +51,8 @@ const desserts = [
 
 const randomFrom = (values) => values[Math.floor(Math.random() * values.length)];
 
+const allFoods = [...dishes, ...streetFoods, ...desserts];
+
 class Foods {
   dishes() {
     return [...dishes];
@@ -77,7 +79,7 @@ class Foods {
   }
 
   food() {
-    return randomFrom([...dishes, ...streetFoods, ...desserts]);
+    return randomFrom(allFoods);
   }
 }
 

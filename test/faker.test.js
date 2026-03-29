@@ -12,7 +12,7 @@ test('name generator returns strings', () => {
 test('contact generator returns Philippine-like formats', () => {
   assert.match(Faker.contact.mobileNumber(), /^09\d{9}$/);
   assert.match(Faker.contact.landlineNumber(), /^\d{2}-\d{7}$/);
-  assert.match(Faker.contact.emailAddress('Maria Clara'), /^maria.clara@[a-z.]+$/);
+  assert.match(Faker.contact.emailAddress('Maria Clara'), /^maria\.clara@[a-z.]+$/);
 });
 
 test('government ids return expected format', () => {
@@ -38,6 +38,12 @@ test('location generator returns complete lookup arrays and random values', () =
   assert.equal(typeof fullAddress.province, 'string');
   assert.equal(typeof fullAddress.city, 'string');
   assert.equal(typeof fullAddress.barangay, 'string');
+
+  // region and province must be geographically consistent
+  assert.ok(
+    Faker.location.provinces(fullAddress.region).includes(fullAddress.province),
+    `province "${fullAddress.province}" does not belong to region "${fullAddress.region}"`
+  );
 });
 
 test('foods generator returns filipino food data', () => {
